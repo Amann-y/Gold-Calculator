@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Gold Calculator</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <h1
+        class="bg-blue-300 p-1 text-2xl text-center font-semibold container mx-auto"
+      >
+        Gold Calculator
+      </h1>
+      <main>
+        <form
+          class="mx-auto container rounded-lg shadow-md py-2 px-2"
+          id="goldCalculator"
+          onsubmit="handleSubmit()"
+        >
+          <div class="py-4 bg-gray-300 px-2 my-2">
+            <label for="weight" class="w-full text-xl">Weight (In Grams)</label>
+            <input
+              type="number"
+              required
+              class="w-full rounded-md py-2"
+              id="weight"
+            />
+          </div>
+
+          <div class="py-4 bg-gray-300 px-2 my-2">
+            <label for="purity" class="w-full text-xl"
+              >Gold Purity (In Carat)</label
+            >
+            <input
+              type="number"
+              required
+              class="w-full rounded-md py-2"
+              id="purity"
+            />
+          </div>
+
+          <div class="py-4 bg-gray-300 px-2 my-2">
+            <label for="price" class="w-full text-xl"
+              >Gold Price (Per Gram) (24 Carat)
+            </label>
+            <input
+              type="number"
+              required
+              class="w-full rounded-md py-2"
+              id="price"
+            />
+          </div>
+
+          <div class="py-4 bg-gray-300 px-2 my-2">
+            <label for="makingcharge" class="w-full text-xl"
+              >Gold Making Charge (%)
+            </label>
+            <input
+              type="number"
+              required
+              class="w-full rounded-md py-2"
+              id="makingcharge"
+            />
+          </div>
+
+          <div class="py-4 bg-gray-300 px-2 my-2">
+            <label for="gst" class="w-full text-xl">GST (%) </label>
+            <input
+              type="number"
+              required
+              class="w-full rounded-md py-2"
+              id="gst"
+            />
+          </div>
+
+          <div class="py-4 bg-gray-300 px-2 my-2">
+            <button
+              type="button"
+              id="button"
+              class="bg-red-500 text-3xl py-1 hover:bg-red-800 text-white shadow-md px-2 rounded-lg w-full"
+            >
+              Calculate
+            </button>
+          </div>
+
+          <div
+            class="py-4 bg-gray-300 px-2 my-2 flex flex-col justify-center items-center text-xl md:text-2xl"
+            id="result"
+          ></div>
+        </form>
+      </main>
+    </section>
+  </body>
+</html>
